@@ -110,7 +110,7 @@ This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for
 **Made with ❤️ by Vishnu Pandey**
 
 Check it out live: \[Your live demo link here]
-Connect with me: [https://www.linkedin.com/in/vishnu-pandey-3b2047360/] • \[GitHub Profile]
+Connect with me: [https://www.linkedin.com/in/vishnu-pandey-3b2047360/] • [https://github.com/Vishnu-8349]
 
 ```
 
