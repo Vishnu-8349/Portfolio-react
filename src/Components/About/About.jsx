@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 // import profile_img from '../../assets/about_profile.svg';
-import profile_img from '../../assets/vishnu-2.jpg';
+import profile_img from '../../assets/vishnu-2.JPG';
 
 const About = () => {
   return (
