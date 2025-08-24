@@ -1,11 +1,10 @@
-````markdown
-# 📁 My Portfolio
+# My Portfolio
 
 ### Full‑Stack Developer | React • Node • Express • MongoDB
 
 ---
 
-## 📌 Overview
+## Overview
 
 This is my personal portfolio website showcasing my skills, projects, about section, and contact form. It’s fully responsive and uses **Web3Forms API** to handle form submissions without a backend.
 
@@ -16,7 +15,7 @@ This is my personal portfolio website showcasing my skills, projects, about sect
 
 ---
 
-## 🛠 Features
+## Features
 
 - **Responsive Navbar** including mobile collapsible menu  
 - **Hero Section** with scaling images and CTA buttons  
@@ -27,20 +26,12 @@ This is my personal portfolio website showcasing my skills, projects, about sect
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- 🔧 **React.js**, **React Hooks**, **CSS Modules / Styled Components**  
-- 📂 **Create React App** for project setup  
-- 📧 **Web3Forms API** for contact form submissions  
-- 🎨 **Flexbox / CSS Grid** + media queries for responsiveness
-
----
-
-## 📷 Screenshots
-
-*Include images or gifs showing your Hero section, Projects grid, Contact form, etc.*
-
----
+- **React.js**, **React Hooks**, **CSS Modules / Styled Components**  
+- **Create React App** for project setup  
+- **Web3Forms API** for contact form submissions  
+- **Flexbox / CSS Grid** + media queries for responsivenes
 
 ## ⚙ Setup & Installation
 
@@ -76,7 +67,7 @@ This is my personal portfolio website showcasing my skills, projects, about sect
 
 ---
 
-## 📬 Contact Form Setup
+## Contact Form Setup
 
 The contact form is powered by Web3Forms:
 
@@ -86,20 +77,20 @@ The contact form is powered by Web3Forms:
 
 ---
 
-## 🙌 Contributing
+## Contributing
 
 Contributions are welcome!
 Feel free to open issues or PRs related to UI enhancements, additional features, bug fixes, or responsiveness improvements.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.
 
 ---
 
-## 📎 Acknowledgments
+## Acknowledgments
 
 * Inspiration from [Web3Forms](https://web3forms.com)
 * Layout and design influenced by modern developer portfolios
