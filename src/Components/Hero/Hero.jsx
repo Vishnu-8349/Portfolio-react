@@ -4,6 +4,9 @@ import profile_img from "../../assets/vishnu-2.JPG";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Hero = () => {
+  const openResume = () => {
+    window.open('/resume.pdf', '_blank');
+  }
   return (
     <div id='home' className='hero'>
       <img src={profile_img} alt="" className='profile-img'/>
@@ -13,10 +16,10 @@ const Hero = () => {
         <div className="hero-connect">
             <AnchorLink className='anchor-link' offset={50} href='#contact'>Connect with me</AnchorLink>
         </div>
-        <div className="hero-resume">My Resume</div>
+        <div className="hero-resume" onClick={openResume} style={{cursor: "pointer"}}>My Resume</div>
       </div>
     </div>
   )
 }
 
-export default Hero
+export default Hero;
