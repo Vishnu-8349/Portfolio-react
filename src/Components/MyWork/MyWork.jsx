@@ -1,13 +1,13 @@
-import React from 'react';
-import './MyWork.css';
-import theme_pattern from '../../assets/theme_pattern.svg';
+import React from "react";
+import "./MyWork.css";
+import theme_pattern from "../../assets/theme_pattern.svg";
 // import mywork_data from '../../assets/mywork_data';
-import arrow_icon from '../../assets/arrow_icon.svg';
-import mywork_data from './mywork_data';
+import arrow_icon from "../../assets/arrow_icon.svg";
+import mywork_data from "./mywork_data";
 
 const MyWork = () => {
   return (
-    <div id='work' className='mywork'>
+    <div id="work" className="mywork">
       <div className="mywork-title">
         <h1>My latest work</h1>
         <img src={theme_pattern} alt="" />
@@ -29,12 +29,21 @@ const MyWork = () => {
           </a>
         ))}
       </div>
-      <div className="mywork-showmore">
+      <div
+        className="mywork-showmore"
+        onClick={() =>
+          window.open(
+            "https://github.com/Vishnu-8349?tab=repositories",
+            "_blank"
+          )
+        }
+        style={{ cursor: "pointer" }}
+      >
         <p>Show More</p>
         <img src={arrow_icon} alt="" />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default MyWork;
