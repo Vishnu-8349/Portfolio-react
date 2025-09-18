@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Hero = () => {
   const openResume = () => {
-    window.open('/resume.pdf', '_blank');
+    window.open('/Vishnu_resume.pdf', '_blank');
   }
   return (
     <div id='home' className='hero'>
