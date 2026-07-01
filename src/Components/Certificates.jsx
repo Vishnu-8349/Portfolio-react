@@ -30,7 +30,7 @@ const Certificates = () => {
   ];
 
   return (
-    <section id="certificates" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5 bg-[#121826]/30">
+    <section id="certificates" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5 bg-[#121826]/30">
       {/* Background glow shadow */}
       <div className="absolute left-[-10%] bottom-[10%] w-[380px] h-[380px] bg-blue-950/5 rounded-full blur-[130px] pointer-events-none -z-10" />
 

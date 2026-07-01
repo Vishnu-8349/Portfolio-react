@@ -43,13 +43,13 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5 bg-[#121826]/30">
+    <section id="experience" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5 bg-[#121826]/30">
       {/* Background glow shape */}
       <div className="absolute right-[-10%] bottom-[-10%] w-[380px] h-[380px] bg-blue-950/5 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-4xl">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-500/5 border border-blue-500/10 px-3 py-1 rounded-full">
             History
           </span>

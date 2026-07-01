@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
+    <section id="contact" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
       {/* Dynamic Glow decoration */}
       <div className="absolute right-[-10%] bottom-[-15%] w-[400px] h-[400px] bg-blue-900/5 rounded-full blur-[140px] pointer-events-none -z-10" />
 

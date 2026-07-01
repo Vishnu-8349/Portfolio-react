@@ -29,6 +29,20 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      window.lenis?.stop();
+    } else {
+      document.body.style.overflow = '';
+      window.lenis?.start();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.lenis?.start();
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: '-30% 0px -50% 0px',
@@ -81,6 +95,8 @@ const Navbar = () => {
     >
       <div
         className={`w-full max-w-6xl flex items-center justify-between transition-all duration-500 rounded-full px-6 md:px-8 ${
+          isOpen ? 'blur-sm opacity-20 pointer-events-none' : ''
+        } ${
           scrolled
             ? 'glass py-3 shadow-xl shadow-black/35 border-white/10'
             : 'bg-transparent py-6 border-transparent'
@@ -143,33 +159,71 @@ const Navbar = () => {
       {/* Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="absolute top-20 left-4 right-4 py-8 px-6 glass rounded-2xl flex flex-col items-center space-y-4 md:hidden border border-white/10 shadow-2xl"
-          >
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => handleNavClick(e, item.id)}
-                className={`text-xs font-bold uppercase tracking-widest py-2 transition-colors ${
-                  activeSection === item.id ? 'text-blue-500' : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, 'contact')}
-              className="w-full text-center py-3 text-xs font-bold uppercase tracking-widest text-[#F8FAFC] border border-blue-500/30 bg-blue-500/10 rounded-full mt-4"
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 md:hidden"
+            />
+
+            {/* Drawer side panel */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 26, stiffness: 220 }}
+              className="fixed top-0 right-0 h-screen w-[280px] bg-[#0B0F19]/95 backdrop-blur-xl border-l border-white/5 z-50 flex flex-col justify-between py-6 px-6 md:hidden shadow-2xl"
             >
-              Ping Me
-            </a>
-          </motion.div>
+              <div>
+                {/* Header inside drawer */}
+                <div className="flex items-center justify-between pb-6 border-b border-white/5">
+                  <div className="text-base font-bold tracking-widest text-[#F8FAFC] flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse shadow-[0_0_8px_#3b82f6]" />
+                    SECTIONS<span className="text-blue-500">.</span>
+                  </div>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="text-slate-400 hover:text-white p-1"
+                    aria-label="Close menu"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                {/* Vertical links list */}
+                <nav className="flex flex-col space-y-5 mt-8">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      onClick={(e) => handleNavClick(e, item.id)}
+                      className={`text-xs font-bold uppercase tracking-widest py-2 border-b border-transparent hover:border-blue-500/30 transition-all ${
+                        activeSection === item.id 
+                          ? 'text-blue-400 pl-2 border-l-2 border-blue-500' 
+                          : 'text-slate-400 hover:text-white'
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+
+              {/* Bottom drawer footer button */}
+              <div className="pt-6 border-t border-white/5">
+                <a
+                  href="#contact"
+                  onClick={(e) => handleNavClick(e, 'contact')}
+                  className="w-full block text-center py-3 text-xs font-bold uppercase tracking-widest text-[#F8FAFC] border border-blue-500/30 bg-blue-500/10 rounded-full hover:bg-blue-500/25 transition-all duration-300"
+                >
+                  Ping Me
+                </a>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>

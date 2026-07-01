@@ -65,7 +65,7 @@ const Hero = () => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       id="home"
-      className="relative min-h-[80vh] w-full flex flex-col justify-center items-center px-6 md:px-8 overflow-hidden z-10 py-16 md:py-20"
+      className="relative w-full flex flex-col justify-center items-center px-6 md:px-8 overflow-hidden z-10 pt-28 pb-12 md:pt-36 md:pb-16"
     >
       {/* Background glow mapped to mouse parallax */}
       <motion.div

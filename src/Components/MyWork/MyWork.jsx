@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-8%' }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`flex flex-col lg:flex-row gap-10 items-center justify-between py-12 ${
+      className={`flex flex-col lg:flex-row gap-10 items-center justify-between py-6 ${
         isEven ? '' : 'lg:flex-row-reverse'
       }`}
     >
@@ -197,7 +197,7 @@ const MyWork = () => {
     {
       title: "Let's Konstruct",
       description: "An enterprise-grade marketplace and dashboard for construction procurement, tracking orders, invoices, and payments in one unified and highly transparent interface.",
-      stack: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite', 'REST APIs'],
+      stack: ['React', 'Node.js', 'Express', 'SQL', 'Tailwind CSS', 'Framer Motion'],
       features: ['Procurement Engine', 'Invoice Tracking', 'Interactive KPI Cards', 'Dynamic Dashboard'],
       image: letsKonstructImg,
       liveLink: 'https://letskonstruct.com/',
@@ -215,7 +215,7 @@ const MyWork = () => {
     {
       title: 'Stock Trading Platform',
       description: 'A comprehensive simulated stock trading dashboard mimicking real-world exchange interfaces. Implements portfolio ledger calculations, real-time interactive charts, and holdings analysis.',
-      stack: ['React', 'Redux Toolkit', 'Tailwind CSS', 'Framer Motion', 'REST APIs'],
+      stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux Toolkit', 'Tailwind CSS'],
       features: ['Interactive Holdings', 'Real-time Charting', 'Portfolio Ledger', 'Zerodha Clone UI'],
       image: stockTradingImg,
       liveLink: 'https://stock-trading-platform-1-vs3h.onrender.com/',
@@ -233,7 +233,7 @@ const MyWork = () => {
     {
       title: 'Airbnb Clone',
       description: 'A full-fidelity replication of Airbnb\'s booking core interfaces. Standardizes dynamic date calendars, geolocation search filters, interactive list cards, and responsive state tracking.',
-      stack: ['React', 'Redux Toolkit', 'Tailwind CSS', 'REST APIs'],
+      stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux Toolkit', 'Tailwind CSS'],
       features: ['Dynamic Filter', 'Booking State', 'Modular Form UI', 'Mock Databases'],
       image: airbnbImg,
       liveLink: 'https://wanderlust-575w.onrender.com/listings',
@@ -251,7 +251,7 @@ const MyWork = () => {
   ];
 
   return (
-    <section id="projects" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5 bg-[#121826]/30">
+    <section id="projects" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5 bg-[#121826]/30">
       <div className="absolute right-[50%] top-[30%] -translate-x-1/2 w-[500px] h-[500px] bg-blue-950/5 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-6xl">
@@ -269,7 +269,7 @@ const MyWork = () => {
         </div>
 
         {/* Project List */}
-        <div className="divide-y divide-white/5 space-y-12">
+        <div className="divide-y divide-white/5 space-y-6">
           {projectsData.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}

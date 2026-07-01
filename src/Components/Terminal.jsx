@@ -104,7 +104,7 @@ const Terminal = () => {
   };
 
   return (
-    <section id="terminal" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
+    <section id="terminal" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
       <div className="absolute right-[-10%] top-[30%] w-[380px] h-[380px] bg-blue-950/5 rounded-full blur-[130px] pointer-events-none -z-10" />
 
       <div className="w-full max-w-3xl flex flex-col items-center">

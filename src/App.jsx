@@ -32,6 +32,8 @@ const App = () => {
       touchMultiplier: 1.5,
     });
 
+    window.lenis = lenis;
+
     let animationFrameId;
     function raf(time) {
       lenis.raf(time);
@@ -43,6 +45,7 @@ const App = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
       lenis.destroy();
+      window.lenis = null;
     };
   }, [isLoading]);
 

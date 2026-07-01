@@ -50,7 +50,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
+    <section id="skills" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
       {/* Background glow shadow */}
       <div className="absolute left-[-15%] bottom-[-10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none -z-10" />
 

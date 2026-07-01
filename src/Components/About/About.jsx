@@ -32,7 +32,7 @@ const About = () => {
       title: 'Current Position',
       icon: <Briefcase size={15} />,
       content:
-        'Currently building dynamic analytics dashboards, custom CMS configurations, and business application modules at Endoveda. Handled responsive data views, REST API bindings, and build optimization.',
+        'Currently contributing to the Endoveda healthcare platform by building responsive React applications, implementing custom CMS features, integrating REST APIs, and maintaining production-ready frontend solutions.',
     },
     goals: {
       title: 'Goals',
@@ -50,7 +50,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative w-full py-10 md:py-14 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
+    <section id="about" className="relative w-full py-12 md:py-16 px-6 md:px-8 overflow-hidden z-10 flex items-center justify-center border-t border-white/5">
       {/* Glow decorative light */}
       <div className="absolute right-[-10%] top-[20%] w-[350px] h-[350px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none -z-10" />
 
