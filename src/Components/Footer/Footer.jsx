@@ -15,7 +15,7 @@ const Footer = () => {
         
         {/* Animated Brand Logo */}
         <div className="flex items-center gap-2 select-none">
-          <span className="w-2 h-2 bg-blue-500 rounded-full animate-ping" />
+          <img src="/logo.jpg" alt="VP Logo" className="w-5 h-5 rounded-full border border-blue-500/20 object-cover animate-pulse" />
           <span className="text-xs font-bold uppercase tracking-widest text-[#F8FAFC]">
             Vishnu Pandey<span className="text-blue-500">.</span>
           </span>

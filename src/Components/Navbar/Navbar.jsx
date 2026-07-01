@@ -108,7 +108,7 @@ const Navbar = () => {
           onClick={(e) => handleNavClick(e, 'home')}
           className="text-base font-bold tracking-widest text-[#F8FAFC] relative z-50 flex items-center gap-2"
         >
-          <span className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse shadow-[0_0_8px_#3b82f6]" />
+          <img src="/logo.jpg" alt="VP Logo" className="w-6 h-6 rounded-full border border-blue-500/20 object-cover" />
           VISHNU<span className="text-blue-500">.</span>
         </a>
 
@@ -181,7 +181,6 @@ const Navbar = () => {
                 {/* Header inside drawer */}
                 <div className="flex items-center justify-between pb-6 border-b border-white/5">
                   <div className="text-base font-bold tracking-widest text-[#F8FAFC] flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse shadow-[0_0_8px_#3b82f6]" />
                     SECTIONS<span className="text-blue-500">.</span>
                   </div>
                   <button
